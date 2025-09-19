@@ -5,6 +5,14 @@ Este repositório contém o desenvolvimento de um desafio prático de banco de d
 
 ---
 
+## 🛠️ Ferramenta utilizada
+
+MySQL Workbench 8.0 (diagrama ER)
+
+Link para download: https://www.mysql.com/products/workbench/
+
+---
+
 ## 🔹 Etapa 1 - Modelo Lógico a partir do Conceitual  
 A primeira etapa consistiu em transformar o **modelo conceitual** em um **modelo lógico**, definindo as entidades, atributos e relacionamentos da base de dados.  
 
