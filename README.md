@@ -8,8 +8,9 @@ Este repositório contém o desenvolvimento de um desafio prático de banco de d
 ## 🔹 Etapa 1 - Modelo Lógico a partir do Conceitual  
 A primeira etapa consistiu em transformar o **modelo conceitual** em um **modelo lógico**, definindo as entidades, atributos e relacionamentos da base de dados.  
 
-📌 **Diagrama utilizado como base:**  
-![Modelo Lógico ](Arquivos/modelagemlogicaecommerce.png
+📌 **Diagrama utilizado como base:**
+
+![Modelo Lógico ](Arquivos/modeleagem_conceitual_bd_oficina.png
 )
 
 ---
@@ -235,11 +236,13 @@ Essas consultas validaram a consistência do modelo e demonstraram o potencial d
 SELECT Tipo_Cliente, Nome, Email
 FROM Cliente;
 ```
+![Resultado da Query](Arquivos/QUERY1.jpg)
 
--- Listar todos os mecânicos e suas informações
+- Listar todos os mecânicos e suas informações
 ```ruby
 SELECT * FROM Mecanico;
 ```
+![Resultado da Query](Arquivos/QUERY2.jpg)
 
 - Filtros com declaração WHERE
 
@@ -249,6 +252,7 @@ SELECT Cliente_idCliente, Modelo, placa, Marca
 FROM Veiculo
 WHERE Marca = 'Mercedes';
 ```
+![Resultado da Query](Arquivos/QUERY3.jpg)
 
 ```ruby
 -- Encontrar serviços acima de R$100,00
@@ -256,6 +260,7 @@ SELECT Descricao, ValorMaoDeObra
 FROM servicos
 WHERE ValorMaoDeObra > '100.00';
 ```
+![Resultado da Query](Arquivos/QUERY4.jpg)
 
 - Criar expressões para gerar atributos derivados
 
@@ -267,7 +272,7 @@ Valor,
 (Valor + (Valor * 0.1)) AS valor_total 
 FROM pecas;
 ```
-
+![Resultado da Query](Arquivos/QUERY5.jpg)
 
 ```ruby
 -- Desconto de  20%  nos serviços
@@ -277,6 +282,7 @@ ValorMaoDeObra,
 (ValorMaoDeObra - (ValorMaoDeObra * 0.2)) AS valor_total_desconto
 FROM servicos;
 ```
+![Resultado da Query](Arquivos/QUERY6.jpg)
 
 - Ordenações de dados com ORDER BY
 
@@ -287,12 +293,16 @@ FROM servicos
 ORDER BY ValorMaoDeObra DESC;
 ```
 
+![Resultado da Query](Arquivos/QUERY7.jpg)
+
 ```ruby
 -- Listar os mecanicos por ordem alfabética
 SELECT Nome, Telefone, Especialidade, CPF
 FROM Mecanico
 ORDER BY Nome;
 ```
+
+![Resultado da Query](Arquivos/QUERY8.jpg)
 
 - Top peças mais usadas (JOIN, GROUP BY, COUNT)
 
@@ -306,6 +316,8 @@ GROUP BY p.idPecas, p.Nome
 ORDER BY TotalUsado DESC;
 ```
 
+![Resultado da Query](Arquivos/QUERY9.jpg)
+
 - Quantos serviços foram realizados por ordem? (GROUP BY e HAVING)
 
 ```ruby
@@ -318,6 +330,8 @@ GROUP BY os.idOrdemServico, os.Numero
 HAVING COUNT(so.Servicos_idServicos) >= 1
 ORDER BY TotalServicos DESC;
 ```
+
+![Resultado da Query](Arquivos/QUERY10.jpg)
 
 ---
 
